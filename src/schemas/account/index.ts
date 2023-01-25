@@ -1,2 +1,2 @@
-export * as RequestQuery from "./requestQuery";
+export * as RequestParams from "./requestParams";
 export * as Response from "./response";

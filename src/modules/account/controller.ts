@@ -1,5 +1,5 @@
 import { Router } from "express";
-import { getAccountByGameName } from "@app/modules/account/services";
+import { getAccountByRiotId } from "@app/modules/account/services";
 import { validate } from "@app/middleware/validate";
 import { Account } from "@app/schemas";
 
@@ -8,10 +8,10 @@ require("express-async-errors");
 export const AccountController = Router();
 
 AccountController.get(
-  "/by-riot-id",
+  "/by-riot-id/:gameName/:tagLine",
   validate({
-    query: Account.RequestQuery.GetAccountByGameNameSchema,
-    response: Account.Response.GetAccountByGameNameSchema,
+    params: Account.RequestParams.GetAccountByRiotIdSchema,
+    response: Account.Response.GetAccountByRiotIdSchema,
   }),
-  async (req, res) => res.json(await getAccountByGameName(req.query))
+  async (req, res) => res.json(await getAccountByRiotId(req.params))
 );
