@@ -1,0 +1,18 @@
+{
+  "compilerOptions": {
+    "module": "CommonJS",
+    "target": "es2020",
+    "strict": true,
+    "sourceMap": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "outDir": "dist",
+    "baseUrl": "./",
+    "paths": {
+      "@app": ["src"],
+      "@app/*": ["src/*"]
+    }
+  },
+  "include": ["src/**/*"]
+}

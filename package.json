@@ -1,0 +1,38 @@
+{
+  "name": "riot-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsup src",
+    "start": "dist/index.js",
+    "start:dev": "nodemon --exec \"tsx src/index.ts\" -e .ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/cors": "^2.8.13",
+    "@types/express": "^4.17.16",
+    "@types/node": "^18.11.18",
+    "nodemon": "^2.0.20",
+    "tsup": "^6.5.0",
+    "tsx": "^3.12.2",
+    "typescript": "^4.9.4"
+  },
+  "dependencies": {
+    "@hapi/boom": "^10.0.0",
+    "axios": "^1.2.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "express-async-errors": "^3.1.1",
+    "express-prom-bundle": "^6.6.0",
+    "http-status-codes": "^2.2.0",
+    "pino": "^8.8.0",
+    "pino-http": "^8.3.1",
+    "pino-pretty": "^9.1.1",
+    "prom-client": "^14.1.1",
+    "zod": "^3.20.2"
+  }
+}
