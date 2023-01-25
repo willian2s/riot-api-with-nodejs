@@ -7,7 +7,7 @@ import prom from "prom-client";
 import { router } from "@app/router";
 import { expressLogger } from "@app/utils";
 import { logger } from "@app/services";
-import { errorHandler } from "@app/middleware";
+import { auth, errorHandler } from "@app/middleware";
 
 const app = express();
 
@@ -37,7 +37,7 @@ app.get("/metrics", async (_req: Request, res: Response) => {
   res.end(appMetrics);
 });
 
-app.use("/api/v1", router);
+app.use("/api/v1", auth, router);
 
 app.use(errorHandler);
 
