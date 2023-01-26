@@ -1,6 +1,5 @@
 import { riotApi } from "@app/services";
 import { Account } from "@app/schemas";
-import { AxiosError } from "axios";
 
 export const getAccountByRiotId = async ({
   gameName,

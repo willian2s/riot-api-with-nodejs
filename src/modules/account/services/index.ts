@@ -1,1 +1,1 @@
-export * from "./GetAccountByRiotId";
+export * from "./getAccountByRiotId";
