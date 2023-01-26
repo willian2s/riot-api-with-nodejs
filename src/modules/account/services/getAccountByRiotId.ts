@@ -8,7 +8,6 @@ export const getAccountByRiotId = async ({
   const { data } = await riotApi.get(
     `https://americas.api.riotgames.com/riot/account/v1/accounts/by-riot-id/${gameName}/${tagLine}`
   );
-  console.log("🚀 ~ data", data);
 
   const dataParse = Account.Response.GetAccountByRiotIdSchema.parse(data);
 
