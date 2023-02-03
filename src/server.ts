@@ -6,7 +6,7 @@ import promBundle from "express-prom-bundle";
 import prom from "prom-client";
 import { router } from "@app/router";
 import { expressLogger } from "@app/utils";
-import { logger } from "@app/services";
+import { logger } from "@app/services/logger";
 import { auth, errorHandler } from "@app/middleware";
 
 const app = express();
