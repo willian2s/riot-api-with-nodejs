@@ -4,6 +4,7 @@ import cors from "cors";
 import { StatusCodes, ReasonPhrases } from "http-status-codes";
 import promBundle from "express-prom-bundle";
 import prom from "prom-client";
+
 import { router } from "@app/router";
 import { expressLogger } from "@app/utils";
 import { logger } from "@app/services/logger";

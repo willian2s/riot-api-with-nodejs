@@ -1,5 +1,5 @@
-import { ENV, PORT } from "@app/config";
 import app from "@app/server";
+import { ENV, PORT } from "@app/config";
 import { logger } from "@app/services/logger";
 
 async function start() {

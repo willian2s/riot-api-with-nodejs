@@ -1,6 +1,7 @@
 import { internal, isBoom } from "@hapi/boom";
-import type { ErrorRequestHandler } from "express";
 import { StatusCodes } from "http-status-codes";
+
+import type { ErrorRequestHandler } from "express";
 
 export const errorHandler: ErrorRequestHandler = (error, req, res, _next) => {
   if (isBoom(error)) {

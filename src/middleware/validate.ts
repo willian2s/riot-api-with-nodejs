@@ -1,8 +1,9 @@
-import type { Boom } from "@hapi/boom";
 import { badRequest } from "@hapi/boom";
+import { ZodError } from "zod";
+
+import type { Boom } from "@hapi/boom";
 import type { RequestHandler } from "express";
 import type { z } from "zod";
-import { ZodError } from "zod";
 
 export type Validation<Params, Response, Body, Query> = {
   body?: z.ZodSchema<Body>;

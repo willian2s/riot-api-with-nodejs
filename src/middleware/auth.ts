@@ -1,6 +1,7 @@
-import { MD5_HASH } from "@app/config";
-import { unauthorized } from "@hapi/boom";
 import { NextFunction, Request, Response } from "express";
+import { unauthorized } from "@hapi/boom";
+
+import { MD5_HASH } from "@app/config";
 
 function compareToken(token: string): Boolean | Error {
   const isAuthicate = MD5_HASH === token;

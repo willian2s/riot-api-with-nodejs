@@ -1,8 +1,9 @@
 import { Router } from "express";
+import { AxiosError } from "axios";
+
 import { getAccountByRiotId } from "@app/modules/account/services";
 import { validate } from "@app/middleware/validate";
 import { Account } from "@app/schemas";
-import { AxiosError } from "axios";
 
 require("express-async-errors");
 

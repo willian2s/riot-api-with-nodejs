@@ -1,8 +1,9 @@
 import { Router } from "express";
 import { AxiosError } from "axios";
+
 import { validate } from "@app/middleware/validate";
 import { Lol } from "@app/schemas";
-import { getMatchesByPuuid } from "./services/getMatchListByPuuid";
+import { getMatchesByPuuid } from "@app/modules/lol/services";
 
 require("express-async-errors");
 
