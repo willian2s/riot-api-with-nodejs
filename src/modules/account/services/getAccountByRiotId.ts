@@ -1,7 +1,7 @@
 import axios from "axios";
 
 import { Account } from "@app/schemas";
-import { RIOT_PERSONAL_API_KEY } from "@app/config";
+import { RIOT_API_KEY } from "@app/config";
 
 export const getAccountByRiotId = async ({
   gameName,
@@ -11,7 +11,7 @@ export const getAccountByRiotId = async ({
     `https://americas.api.riotgames.com/riot/account/v1/accounts/by-riot-id/${gameName}/${tagLine}`,
     {
       headers: {
-        "X-Riot-Token": RIOT_PERSONAL_API_KEY,
+        "X-Riot-Token": RIOT_API_KEY,
       },
     }
   );

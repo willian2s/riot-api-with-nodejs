@@ -24,8 +24,4 @@ export const RIOT_API_KEY = assertEnvVarPresent(
   process.env.RIOT_API_KEY,
   "RIOT_API_KEY"
 );
-export const RIOT_PERSONAL_API_KEY = assertEnvVarPresent(
-  process.env.RIOT_PERSONAL_API_KEY,
-  "RIOT_PERSONAL_API_KEY"
-);
 export const MD5_HASH = assertEnvVarPresent(process.env.MD5_HASH, "MD5_HASH");
