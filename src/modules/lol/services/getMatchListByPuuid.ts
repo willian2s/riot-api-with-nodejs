@@ -1,19 +1,17 @@
-import axios from "axios";
-
-import { RIOT_API_KEY } from "@app/config";
+import { api } from "@app/services/api";
 import { Lol } from "@app/schemas";
+import { getMatchById } from "./getMatchById";
 
 export const getMatchesByPuuid = async ({
   puuid,
 }: Lol.RequestParams.GetMatchesByPuuid) => {
-  const { data } = await axios.get(
-    `https://americas.api.riotgames.com/lol/match/v5/matches/by-puuid/${puuid}/ids?start=0&count=20`,
-    {
-      headers: {
-        "X-Riot-Token": RIOT_API_KEY,
-      },
-    }
+  const { data } = await api.get<Lol.Response.MatchIdList>(
+    `/lol/match/v5/matches/by-puuid/${puuid}/ids?start=0&count=1`
   );
 
-  return data;
+  const matches = await Promise.all(
+    data.map(async (matchId) => await getMatchById({ matchId }))
+  );
+
+  return matches;
 };

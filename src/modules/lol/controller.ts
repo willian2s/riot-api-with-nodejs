@@ -13,7 +13,7 @@ LolController.get(
   "/match/matches/by-puuid/:puuid",
   validate({
     params: Lol.RequestParams.GetMatchesByPuuidSchema,
-    response: Lol.Response.MatchlistSchema,
+    response: Lol.Response.MatchIdlistSchema,
   }),
   async (req, res) => {
     try {

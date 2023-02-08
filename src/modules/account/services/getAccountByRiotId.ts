@@ -1,19 +1,12 @@
-import axios from "axios";
-
 import { Account } from "@app/schemas";
-import { RIOT_API_KEY } from "@app/config";
+import { api } from "@app/services/api";
 
 export const getAccountByRiotId = async ({
   gameName,
   tagLine,
 }: Account.RequestParams.GetAccountByRiotId): Promise<Account.Response.GetAccountByRiotId> => {
-  const { data } = await axios.get(
-    `https://americas.api.riotgames.com/riot/account/v1/accounts/by-riot-id/${gameName}/${tagLine}`,
-    {
-      headers: {
-        "X-Riot-Token": RIOT_API_KEY,
-      },
-    }
+  const { data } = await api.get(
+    `/riot/account/v1/accounts/by-riot-id/${gameName}/${tagLine}`
   );
 
   const dataParse = Account.Response.GetAccountByRiotIdSchema.parse(data);
