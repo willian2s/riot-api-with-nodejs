@@ -1,0 +1,40 @@
+[
+  {
+    "_id": "cd72f430-5c96-48b1-9e82-9e07371d2dbb",
+    "colId": "65ef0dbe-a9dc-4420-b01f-b78826a1de73",
+    "containerId": "",
+    "name": "get account by riot id",
+    "url": "{{baseUrl}}/account/by-riot-id/Toadette/1212",
+    "method": "GET",
+    "sortNum": 10000,
+    "created": "2023-02-08T15:31:16.833Z",
+    "modified": "2023-02-08T15:32:25.497Z",
+    "headers": [
+      {
+        "name": "x-access-token",
+        "value": "{{accessToken}}"
+      }
+    ],
+    "params": [],
+    "tests": []
+  },
+  {
+    "_id": "6158a6dc-d660-4dfc-9a94-751eaa0a007b",
+    "colId": "65ef0dbe-a9dc-4420-b01f-b78826a1de73",
+    "containerId": "",
+    "name": "Get Matches By PUUID",
+    "url": "{{baseUrl}}/lol/match/matches/by-puuid/mprXmrE_6uKAnFj5tgpSKWgwJEM4vXAPqxSz8TOszGXVbOFlC-qsRFkoz7-DAjh6R_EPweLNh4d2OQ",
+    "method": "GET",
+    "sortNum": 20000,
+    "created": "2023-02-08T15:33:48.642Z",
+    "modified": "2023-02-08T15:35:09.151Z",
+    "headers": [
+      {
+        "name": "x-access-token",
+        "value": "{{accessToken}}"
+      }
+    ],
+    "params": [],
+    "tests": []
+  }
+]
