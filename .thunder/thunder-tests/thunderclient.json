@@ -23,11 +23,11 @@
     "colId": "65ef0dbe-a9dc-4420-b01f-b78826a1de73",
     "containerId": "",
     "name": "Get Matches By PUUID",
-    "url": "{{baseUrl}}/lol/match/matches/by-puuid/mprXmrE_6uKAnFj5tgpSKWgwJEM4vXAPqxSz8TOszGXVbOFlC-qsRFkoz7-DAjh6R_EPweLNh4d2OQ",
+    "url": "{{baseUrl}}/lol/match/matches/riot-id/Toadette/1212",
     "method": "GET",
     "sortNum": 20000,
     "created": "2023-02-08T15:33:48.642Z",
-    "modified": "2023-02-08T15:35:09.151Z",
+    "modified": "2023-02-09T16:23:14.193Z",
     "headers": [
       {
         "name": "x-access-token",

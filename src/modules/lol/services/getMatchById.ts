@@ -24,7 +24,6 @@ export const getMatchById = async ({
         win,
         lane,
         summonerName,
-        puuid,
       }) => ({
         assists,
         championName,

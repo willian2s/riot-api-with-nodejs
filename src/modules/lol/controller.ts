@@ -2,7 +2,7 @@ import { Router } from "express";
 import { AxiosError } from "axios";
 
 import { validate } from "@app/middleware/validate";
-import { Lol } from "@app/schemas";
+import { Account, Lol } from "@app/schemas";
 import { getMatchesByPuuid } from "@app/modules/lol/services";
 
 require("express-async-errors");
@@ -10,10 +10,10 @@ require("express-async-errors");
 export const LolController = Router();
 
 LolController.get(
-  "/match/matches/by-puuid/:puuid",
+  "/match/matches/riot-id/:gameName/:tagLine",
   validate({
-    params: Lol.RequestParams.GetMatchesByPuuidSchema,
-    response: Lol.Response.MatchIdlistSchema,
+    params: Account.RequestParams.GetAccountByRiotIdSchema,
+    response: Lol.Response.UserMatchesSchema,
   }),
   async (req, res) => {
     try {

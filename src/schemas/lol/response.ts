@@ -38,10 +38,33 @@ export const MatchSchema = z.object({
   info: MatchInfoSchema,
 });
 
+export const StatsSchema = z.object({
+  assists: z.number(),
+  championName: z.string(),
+  deaths: z.number(),
+  kills: z.number(),
+  doubleKills: z.number(),
+  tripleKills: z.number(),
+  quadraKills: z.number(),
+  pentaKills: z.number(),
+  win: z.boolean(),
+  lane: z.string(),
+  summonerName: z.string(),
+});
+
+export const UserMatchSchema = z.object({
+  matchId: z.string(),
+  stats: StatsSchema,
+});
+
 export const MatchListSchema = z.array(MatchSchema);
 
 export const MatchIdlistSchema = z.array(z.string());
 
+export const UserMatchesSchema = z.array(UserMatchSchema);
+
 export type MatchIdList = z.infer<typeof MatchIdlistSchema>;
 
 export type MatchList = z.infer<typeof MatchListSchema>;
+
+export type UserMatches = z.infer<typeof UserMatchesSchema>;
